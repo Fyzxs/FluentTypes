@@ -9,3 +9,8 @@ Create objects to represent the concepts you want. A `Name` should be an object;
 The FluentTypes help navigate the microObject space and are a style that enables easy functionality and fluidity in the code.
 
 I'm still experimenting with how this functions in the code and where it fails. 
+
+
+
+This isn't only to remove actual primitives from the code. This is intended to be a style for classes that represent objects, 
+such as `Name` to be operated on more effectively and readably in the code.
