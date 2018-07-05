@@ -1,6 +1,6 @@
-﻿using FluentTypes.Numbers.Dbls;
+﻿using FluentTypes.Numbers.Ints;
 
-namespace FluentTypes.Numbers.Ints
+namespace FluentTypes.Numbers.Dbls
 {
     public sealed class DblToInt : Int
     {
@@ -11,6 +11,6 @@ namespace FluentTypes.Numbers.Ints
             _origin = origin;
         }
 
-        protected override int RawValue() => (int)(double)_origin;
+        protected override int Value() => (int)(double)_origin;
     }
 }

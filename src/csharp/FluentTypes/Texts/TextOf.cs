@@ -1,17 +1,11 @@
-﻿using System;
-
-namespace FluentTypes.Texts
+﻿namespace FluentTypes.Texts
 {
-    public class TextOf : Text
+    public sealed class TextOf : Text
     {
-        private readonly Func<string> _origin;
+        private readonly string _value;
 
-        public TextOf(int origin) : this(origin.ToString) { }
+        public TextOf(string value) => _value = value;
 
-        public TextOf(string origin) : this(() => origin) { }
-
-        private TextOf(Func<string> origin) => _origin = origin;
-
-        protected override string RawValue() => _origin();
+        protected override string Value() => _value;
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace FluentTypes.Bools
 {
-    public sealed class Or : Bool
+    internal sealed class Or : Bool
     {
         private readonly Bool _boolA;
         private readonly Bool _boolB;
@@ -11,6 +11,6 @@
             _boolB = boolB;
         }
 
-        protected override bool RawValue() => _boolA || _boolB;
+        protected override bool Value() => _boolA || _boolB;
     }
 }

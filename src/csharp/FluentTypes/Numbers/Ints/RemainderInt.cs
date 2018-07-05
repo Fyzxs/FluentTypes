@@ -1,6 +1,6 @@
 ﻿namespace FluentTypes.Numbers.Ints
 {
-    public class RemainderInt : Int
+    internal sealed class RemainderInt : Int
     {
         private readonly Int _dividend;
         private readonly Int _divisor;
@@ -11,6 +11,6 @@
             _divisor = divisor;
         }
 
-        protected override int RawValue() => (int)_dividend % (int)_divisor;
+        protected override int Value() => (int)_dividend % (int)_divisor;
     }
 }

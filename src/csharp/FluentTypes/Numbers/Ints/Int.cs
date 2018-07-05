@@ -4,9 +4,9 @@ namespace FluentTypes.Numbers.Ints
 {
     public abstract class Int : Number
     {
-        public static implicit operator int(Int origin) => origin.RawValue();
+        public static implicit operator int(Int origin) => origin.Value();
 
-        protected abstract int RawValue();
+        protected abstract int Value();
 
         public sealed override Int AsInt() => this;
 

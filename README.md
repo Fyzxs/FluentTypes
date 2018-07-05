@@ -14,3 +14,9 @@ I'm still experimenting with how this functions in the code and where it fails.
 
 This isn't only to remove actual primitives from the code. This is intended to be a style for classes that represent objects, 
 such as `Name` to be operated on more effectively and readably in the code.
+
+
+### Placement of Dervied Classes
+I'm currently practicing that the derived classes will go into the namespace (Texts, Bools, etc) of the type it appears on, not the type it IS.
+For example, `IsEmptyText` derives from `Bool`, but it will be exposed through `Text` as `aText.IsEmptyText()`. 
+As `IsEmptyText` is strongly coupled to `Text` class, it should be in the same namespace.

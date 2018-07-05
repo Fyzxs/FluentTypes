@@ -6,6 +6,6 @@
 
         public BoolOf(bool origin) => _origin = origin;
 
-        protected override bool RawValue() => _origin;
+        protected override bool Value() => _origin;
     }
 }

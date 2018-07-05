@@ -1,13 +1,13 @@
-﻿using FluentTypes.Numbers.Ints;
+﻿using FluentTypes.Texts;
 
-namespace FluentTypes.Texts
+namespace FluentTypes.Numbers.Ints
 {
-    public class IntToText : Text
+    internal sealed class IntToText : Text
     {
         private readonly Int _origin;
 
         public IntToText(Int origin) => _origin = origin;
 
-        protected override string RawValue() => ((int)_origin).ToString();
+        protected override string Value() => ((int)_origin).ToString();
     }
 }

@@ -4,9 +4,9 @@ namespace FluentTypes.Numbers.Dbls
 {
     public abstract class Dbl : Number
     {
-        public static implicit operator double(Dbl origin) => origin.RawValue();
+        public static implicit operator double(Dbl origin) => origin.Value();
 
-        protected abstract double RawValue();
+        protected abstract double Value();
 
         public sealed override Int AsInt() => new DblToInt(this);
 
