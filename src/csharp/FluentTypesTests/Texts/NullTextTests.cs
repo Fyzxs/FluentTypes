@@ -21,5 +21,18 @@ namespace FluentTypesTests.Texts
             //Assert
             action.Should().Throw<NullObjectInstantiationException>();
         }
+
+        [TestMethod, TestCategory("unit")]
+        public void ShouldReturnEmptyString()
+        {
+            //Arrange
+            Text subject = Text.NullObject;
+
+            //Act
+            string actual = subject;
+
+            //Assert
+            actual.Should().BeEmpty();
+        }
     }
 }
